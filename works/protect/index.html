@@ -1,0 +1,130 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="initial-scale=1, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0, width=device-width">
+<meta name="screen-orientation" content="portrait">
+<title>保卫萌犬屋</title>
+<link rel="stylesheet" href="css/game.css">
+</head>
+
+<body>
+	<img src="images/roof.png" class="roof">
+	<!-- 移动设备提醒 -->
+	<div id="warm1"><span>请使用移动设备体验该游戏哦！</span></div>
+	<!--竖屏提醒-->
+	<div class="to-portrait-box" id="portrait">
+		<div class="to-portrait">
+	    	<div class="dir"></div>
+			<div class="phone"></div>
+	    </div>
+	</div>
+    
+    <!-- 游戏开始 -->
+    <section id="start-game"><h1><img src="images/logo.png"></h1><p class="btns"><a href="javascript:;" class="intro-btn" id="intro-btn">玩法说明</a><a href="javascript:;" class="start-btn" id="start-btn">开始游戏</a></p></section>
+    
+    <!--玩法说明-->
+    <section id="intro-stage">
+    	<a href="javascript:;" id="return"></a>
+        <div id="loading" class="loading"></div><!--大图加载未完成时，显示进度动画-->
+        <img src="images/help.jpg" id="help">
+    </section>
+    <!--游戏主场景-->
+    <section id="game">
+    	<!--游戏界面头部&脚部-->
+        <div class="game-top" id="game-top">
+        	<p class="quanwu">萌犬屋</p>
+            <p id="houses">
+            </p><!--bg为犬屋，误伤一个萌犬，则增加一个img-->
+            <div id="score-area">
+                <span id="highest-score">9999</span>
+                <span id="now-score">0</span>
+            </div>
+        </div>
+        <div class="game-bottom" id="game-bottom">
+        	<div class="kuwu">
+            	<a href="javascript:;" class="bu">补</a>
+                <p id="kuwus">
+                	<span class="kuwu_1"></span>
+                	<span class="kuwu_1"></span>
+                	<span class="kuwu_1"></span>
+                	<span class="kuwu_1"></span>
+                	<span class="kuwu_1"></span>
+                	<span class="kuwu_1"></span>
+                </p>
+            </div>
+        	<div class="shu-wrap">
+            	<a href="javascript:;" class="shu">术</a>
+                <p id="juanzhou">
+                	<span id="jz-num">×3</span>
+                </p>
+                <input type="hidden" value="0" id="hid">
+            </div>
+        </div> 
+        <!--游戏流程--> 
+    	<div class="kaishi"><img src="images/kaishi.png"></div>
+    	<canvas id="stage">抱歉。您的游览器不支持canvas！</canvas>        
+		<div class="shen" id="shen"></div>
+    </section>  
+    <!--结束界面-->  
+    <section class="jieshu"><img src="images/wan.png"></section> 
+    <!--任务评价-->
+    <section id="game-result">
+    	<h2>任务评价</h2>
+        <div class="result">
+        	<p><span class="count" id="count1">0</span><span class="mark" id="mark1">0</span></p>
+        	<p><span class="count" id="count2">0</span><span class="mark" id="mark2">0</span></p>
+        	<p><span class="count" id="count3">0</span><span class="mark" id="mark3">0</span></p>
+            <div class="chenghao-wrap"><span class="count">0</span><span class="chenghao chenghao2"></span></div>
+        </div>
+        <p class="btns"><span><img src="images/share-txt.png"></span><a href="javascript:;" class="share-btn" id="share-btn">查看排名</a><a href="javascript:;" class="replay-btn" id="replay-btn">再玩一次</a></p>
+        <img src="images/weixin.png" class="weixin">
+        <a href="javascript:;" class="back">返回</a>
+    </section>
+    
+    
+    <!--音效-->
+	<!--射击苦无-->
+    <audio id="kwSound">
+		<source src="media/kuwu.mp3" />
+	</audio>
+    <!--施放忍术-->
+    <audio id="rsSound">
+    	<source src="media/rsjz.mp3">
+    </audio>
+    <!--没有子弹时射击音效-->
+    <audio id="emptySound">
+    	<source src="media/empty.mp3">
+    </audio>
+    <!--补满子弹音效-->
+    <audio id="fullSound">
+    	<source src="media/full.mp3">
+    </audio>
+    <!--失血音效-->
+    <audio id="sxSound">
+    	<source src="media/sx.mp3">
+    </audio>
+    
+    
+   
+	<script src="js/WeixinApi.js" charset="utf-8"></script>
+	<script src="js/zepto.min.js"></script>
+    <script src="js/game.js"></script>
+    <script>
+    	//rem
+		(function (doc, win) {
+		  var docEl = doc.documentElement,
+			resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+			recalc = function () {
+			  var clientWidth = docEl.clientWidth;
+			  if (!clientWidth) return;
+			  docEl.style.fontSize = 100 * (clientWidth / 640) + 'px';
+			};
+		
+		  if (!doc.addEventListener) return;
+		  win.addEventListener(resizeEvt, recalc, false);
+		  doc.addEventListener('DOMContentLoaded', recalc, false);
+		})(document, window);
+    </script> 
+</body>
+</html>

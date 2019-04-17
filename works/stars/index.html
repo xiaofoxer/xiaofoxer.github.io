@@ -1,0 +1,169 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,minimal-ui">
+<meta name="format-detection" content="telephone=no,email=no,address=no" />
+<meta name="keywords" content="html5,css3,canvas,mobile,transform,transition,translate,animation">
+<meta name="description" content="Swiper插件、原生JavaScript结合CSS3实现的移动端单页面应用，兼容移动设备和PC高级浏览器。">
+<meta name="author" content="lxh 953554202@qq.com">
+<title>五星标杆</title>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/animate.css">
+<link rel="stylesheet" href="css/swiper.min.css">
+</head>
+<body>
+<!--竖屏提醒-->
+<div class="to-portrait-box f-hidden" id="portrait">
+	<div class="to-portrait">
+    	<div class="dir"></div>
+		<div class="phone"></div>
+    </div>
+</div><!--toPortrait-box-->
+
+<!--场景动画-->
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide stage stage1">
+        	<div class="inner">
+                <div class="stars"><img src="images/stars.png"></div>
+                <div class="medal"><h2><img src="images/text1.png"></h2><p><img src="images/medal.png"></p></div>
+            	<div class="cloud1"></div>
+            	<div class="cloud2"></div>
+                <div class="penguin1">
+                	<img src="images/penguin1.png">
+                	<div class="p-stars"><span class="p-star p-star1"></span><span class="p-star p-star2"></span><span class="p-star p-star3"></span><span class="p-star p-star4"></span><span class="p-star p-star5"></span><span class="p-star p-star6"></span></div>
+                </div>
+                <div class="penguin2"><img src="images/penguin2.png"></div>
+                <div class="penguin3"><img src="images/penguin3.png" class="p3"><div class="p3-music"><span class="p3m1"></span><span class="p3m2"></span><span class="p3m3"></span></div></div>
+            </div>
+        </div><!--stage1-->
+        <div class="swiper-slide stage stage2">
+        	<div class="inner">
+            	<h2 class="title"><img src="images/stage2-title.png"></h2>
+            	<div class="stage2-1">
+                	<div class="penguin4"></div>
+                	<div class="text2"><img src="images/text2.png"></div>
+                	<div class="text3"><img src="images/text3.png"></div>
+                </div>
+            	<div class="stage2-2">
+                	<div class="penguin5"><img src="images/penguin5.png"><img src="images/mess.png" class="mess"></div>
+                	<div class="text4"><img src="images/text4.png"></div>
+                	<div class="text5"><img src="images/text5.png"></div>
+                </div>
+            	<div class="stage2-3">
+                	<div class="penguin8">
+                    	<img src="images/penguin8-1.png" class="penguin8-1">
+                    	<img src="images/penguin8-2.png" class="penguin8-2">
+                    </div>
+                	<div class="text6"><img src="images/text6.png"></div>
+                	<div class="text7"><img src="images/text7.png"></div>
+                </div>
+            </div>        	
+        </div><!--stage2-->
+        <div class="swiper-slide stage stage3">
+        	<div class="inner">	
+                  <div class="hang-star1"><img src="images/hang-star1.png"></div>
+                  <div class="hang-star2"><img src="images/hang-star2.png"></div>
+                  <div class="count"><img src="images/count.png"></div>
+                  <div class="ellipse"></div>
+                  <div class="ell-bg"></div>
+                  <div class="text12"><img src="images/text12.png"></div>
+                  <div class="text13">sonyahuang(黄诗卉)</div>
+                  <div class="seal"><img src="images/seal.png"></div>
+                  <div class="path">
+                  	<p class="text14">您于<span class="red"> 2013.07.19</span>加入鹅鹅伐木累</p>
+                    <div class="ele1"></div>
+                    <div class="ele2"></div>
+                    <p class="text15">已累计获得5星<span class="red">2次</span>啦</p>
+                    <p class="text16">超越了<span class="red">92.6%</span>的鹅厂精英</p>
+                    <div class="ele3"></div>
+                    <div class="dot dot1"></div>
+                    <div class="dot dot2"></div>
+                    <div class="dot dot3"></div>
+                    <div class="dot dot4"></div>
+                    <svg version="1.1" baseProfile="full" id="svg">
+                      <switch>					  
+                        <path stroke="#993"
+ stroke-width="1px" stroke-linecap="butt" stroke-linejoin="miter" fill="none" d="M430,0 C430,0 0,94 0,94 C0,94 430,246 430,246 C430,246 430,222 430,222 C430,222  60,260 60,260"></path>
+                        <foreignObject>
+                            <div class="route"><img src="images/route.png"></div>
+                        </foreignObject>
+                      </switch>
+                  	</svg>
+                  </div>
+                  <div class="penguin9"><img src="images/penguin9.png"></div>
+            </div>        	
+        </div><!--stage3-->
+        <div class="swiper-slide stage stage4">
+        	<div class="inner">
+            	<div class="stage4-bg">
+                	<div class="microphone"><img src="images/microphone.png"></div>
+                    <div class="penguin7"><img src="images/penguin7.png"></div>
+                    <div class="text11"><img src="images/text11.png"></div>
+                </div>
+                <ul class="com-lists">
+                	<li><div class="person"><img src="images/person1.jpg"><span>cathyychen(陈韵)</span></div><p>对工作充满热情，关注细节，追求完美，表现出色！尤其是在跨部门的项目中更是表现出良好的团队合作能力。希望在未来工作中。希望在未来工作中</p><a href="javascript:;" onClick="dialog(this,0)" class="more"><i>更多评语</i></a></li>
+                	<li><div class="person"><img src="images/person2.jpg"><span>maggiewei(魏颖)</span></div><p>对工作充满热情，关注细节，追求完美，表现出色！尤其是在跨部门的项目中更是表现出良好的团队合作能力。希望在未来工作中。希望在未来工作中</p><a href="javascript:;" onClick="dialog(this,1)" class="more"><i>更多评语</i></a></li>
+                </ul>
+                <div class="inner" id="inner">
+                    <div class="comment" id="comment0">
+                        <a href="javascript:;" class="close"><img src="images/close.png"></a>
+                        <div class="person"><img src="images/person1.jpg"><span>cathyychen(陈韵)</span></div><p>对工作充满热情，关注细节，追求完美，表现出色！尤其是在跨部门的项目中更是表现出良好的团队合作能力。希望在未来工作中可以看到你更多的创新和闪光点。</p>
+                    </div>
+                    <div class="comment" id="comment1">
+                        
+                        <a href="javascript:;" class="close"><img src="images/close.png"></a>
+                        <div class="person"><img src="images/person2.jpg"><span>maggiewei(魏颖)</span></div><p>对工作充满热情，关注细节，追求完美，表现出色！尤其是在跨部门的项目中更是表现出良好的团队合作能力。希望在未来工作中可以看到你更多的创新和闪光点。</p>
+                    </div>
+                </div>
+            </div> 
+            <div class="layer" id="layer"></div> 
+        </div><!--stage4-->
+        <div class="swiper-slide stage stage5">
+        	<div class="inner">
+            	<div class="penguin6"><img src="images/penguin6.png"></div>
+                <div class="text10"><img src="images/text10.png"></div>
+            	<div class="stage5-bg"><img src="images/stage5-bg.png"></div>
+                <div class="shapes"><span class="shape1"></span><span class="shape2"></span><span class="shape3"></span><span class="shape4"></span><span class="shape5"></span></div>
+                <ul class="privilege">
+                	<li><img src="images/privilege1.png"><strong>奖金+奖杯</strong><p>白花花的6000大洋(连续3次5星奖金8000RMB)企鹅定制版5星奖杯，有Pony亲笔签名哦！</p></li>
+                	<li><img src="images/privilege2.png"><strong>薪酬</strong><p>鹅们的大爱！年度绩效奖、公司特别奖及年度调薪轻松享</p></li>
+                	<li><img src="images/privilege3.png"><strong>职级晋升</strong><p>晋升大门全面敞开！若上次的绩效为4星/5星，更尊享绿色通道</p></li>
+                	<li><img src="images/privilege4.png"><strong>安居计划</strong><p>若近三次绩效为4星/5星，工作满2年，50W安居贷款助你早日实现买房梦！</p></li>
+                </ul>
+            </div>        	
+        </div><!--stage5-->
+        <div class="swiper-slide stage stage1 stage6">
+        	<div class="inner">
+            	<div class="text8"><img src="images/text8.png"></div>
+            	<div class="text9"><img src="images/text9.png"></div>
+                <div class="dialog-ths"><img src="images/dialog-ths.png"></div>
+            	<div class="penguin1">
+                	<img src="images/penguin1.png">
+                	<div class="p-stars"><span class="p-star p-star1"></span><span class="p-star p-star2"></span><span class="p-star p-star3"></span><span class="p-star p-star4"></span><span class="p-star p-star5"></span><span class="p-star p-star6"></span></div>
+                </div>
+            	<div class="fighting-text1"><img src="images/fighting-text1.png"></div>
+            	<div class="fighting-text2"><img src="images/fighting-text2.png"></div>
+            	<div class="cloud1"></div>
+            	<div class="cloud2"></div>
+                <div class="stars"><img src="images/stars1.png"></div>
+            </div>        	
+        </div><!--stage6-->
+    </div><!--swiper-wrapper-->
+</div><!--swiper-container-->
+<a href="javascript:;" class="arrow"></a>
+<script src="js/app.js"></script>
+<script src="js/swiper.min.js"></script>
+<script>
+var swiper = new Swiper('.swiper-container', {
+	direction: 'vertical',
+	slidesPerView: 1,
+	paginationClickable: true,
+	spaceBetween: 0,
+	mousewheelControl: true
+});
+</script>
+</body>
+</html>
