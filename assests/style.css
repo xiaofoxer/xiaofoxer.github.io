@@ -238,6 +238,7 @@ audio, canvas, iframe, img, svg, video {
 
 body {
     padding-top: 138px;
+    background: #fff;
 }
 
 .header {
