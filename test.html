@@ -5,10 +5,33 @@
 	<title>Document</title>
 </head>
 <body>
+	<video src="http://103.220.67.18/6572C940FD93C7187219636CB/03001201005D37F02896D814EE4751BDCAE946-3D29-4ECA-B232-F0BF7E414C61.mp4?ccode=050F&duration=278&expire=18000&psid=fc5d7fb7f1f17bf82917d9d739440650&ups_client_netip=b7280378&ups_ts=1564058113&ups_userid=&utid=eAifFdpY83gCAbcnndIJXUhL&vid=XNDI4NTI4MTUyOA%3D%3D&vkey=A85777a7d4c9f79e14b6154e576875528&sp=&bc=2&ali_redirect_domain=ykugc.cp31.ott.cibntv.net&ali_redirect_ex_ftag=e041c582aea4b20face71194bfdc6c699bded5630ff0910b&ali_redirect_ex_tmining_ts=1564058203&ali_redirect_ex_tmining_expire=3600&ali_redirect_ex_hot=0" controls></video>
 	<script src="http://code.jquery.com/jquery-git.min.js"></script>
 	<script>
 		$(function() {
-			$('body').css({'backgroun','#f00'}) 
+			$('body').css({'backgroun':'#f00'}) 
+			function isExist(url){
+				$.ajax({
+			       type: "GET",
+			       dataType: "jsonp", //跨域采用jsonp方式
+			       cache: false,
+			       url: url,
+			       data: "",
+			       timeout: 1500,
+			       complete: function(xhr) {
+			         console.log(xhr.status,',',url)
+			         if (xhr.status == 200) {
+			               console.log(url,'存在')
+			            } else if (xhr.status == 0) {
+			               console.log(url,'不存在')
+			            } 
+			         }
+				})
+			}
+			isExist('https://xiaofoxer.github.io')
+			isExist('https://github.com')
+			isExist('http://www.baidu.com')
+			isExist('http://103.220.67.18/6572C940FD93C7187219636CB/03001201005D37F02896D814EE4751BDCAE946-3D29-4ECA-B232-F0BF7E414C61.mp4?ccode=050F&duration=278&expire=18000&psid=fc5d7fb7f1f17bf82917d9d739440650&ups_client_netip=b7280378&ups_ts=1564058113&ups_userid=&utid=eAifFdpY83gCAbcnndIJXUhL&vid=XNDI4NTI4MTUyOA%3D%3D&vkey=A85777a7d4c9f79e14b6154e576875528&sp=&bc=2&ali_redirect_domain=ykugc.cp31.ott.cibntv.net&ali_redirect_ex_ftag=e041c582aea4b20face71194bfdc6c699bded5630ff0910b&ali_redirect_ex_tmining_ts=1564058203&ali_redirect_ex_tmining_expire=3600&ali_redirect_ex_hot=0')
 		})
 	</script>
 </body>
