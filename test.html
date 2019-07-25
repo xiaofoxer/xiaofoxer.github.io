@@ -12,20 +12,23 @@
 			$('body').css({'backgroun':'#f00'}) 
 			function isExist(url){
 				$.ajax({
-			       type: "GET",
-			       dataType: "jsonp", //跨域采用jsonp方式
-			       cache: false,
-			       url: url,
-			       data: "",
-			       timeout: 1500,
-			       complete: function(xhr) {
-			         console.log(xhr.status,',',url)
-			         /*if (xhr.status == 200) {
-			               console.log(url,'存在')
-			            } else if (xhr.status == 0) {
-			               console.log(url,'不存在')
-			            } */
-			         }
+				       type: "GET",
+				       dataType: "jsonp", //跨域采用jsonp方式
+				       cache: false,
+				       url: url,
+				       data: "",
+				       timeout: 1500,
+				       complete: function(xhr) {
+					 console.log(xhr.status,',',url)
+					 /*if (xhr.status == 200) {
+					       console.log(url,'存在')
+					    } else if (xhr.status == 0) {
+					       console.log(url,'不存在')
+					    } */
+					 },
+					success: function(xhr) {
+						console.log('success函数：',xhr.status,',',url)
+					}
 				})
 			}
 			isExist('https://xiaofoxer.github.io')
