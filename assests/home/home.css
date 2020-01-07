@@ -1,6 +1,13 @@
+html,
+body {
+    height: 100%;
+}
+
 body {
     background: url(./nav_bg.jpg) #90ccde left 0 repeat;
-    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex: auto;
 }
 
 header {
@@ -129,17 +136,17 @@ nav ul li:last-child {
     height: 439px;
     background: url(./banner1.jpg);
     margin-top: 30px;
-    animation: banner 6s ease-in-out 1s infinite;
+    animation: banner 6s ease-in-out 0s infinite;
 }
 
 @keyframes banner {
     0% {
         background: url(./banner1.jpg) no-repeat;
     }
-    50% {
+    33% {
         background: url(./banner2.jpg) no-repeat;
     }
-    100% {
+    66% {
         background: url(./banner3.jpg) no-repeat;
     }
 }
@@ -148,10 +155,25 @@ nav ul li:last-child {
     0% {
         background: url(./banner1.jpg) no-repeat;
     }
-    50% {
+    33% {
         background: url(./banner2.jpg) no-repeat;
     }
-    100% {
+    66% {
         background: url(./banner3.jpg) no-repeat;
     }
+}
+
+footer {
+    background: #0D5E88;
+    padding: 26px 0;
+    text-align: center;
+    color: #ffffff;
+}
+
+main {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    overflow-y: scroll;
+    position: relative;
 }
