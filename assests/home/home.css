@@ -129,7 +129,7 @@ nav ul li:last-child {
     height: 439px;
     background: url(./banner1.jpg);
     margin-top: 30px;
-    animation: banner 6s ease-in-out 0s infinite;
+    animation: banner 6s ease-in-out 1s infinite;
 }
 
 @keyframes banner {
