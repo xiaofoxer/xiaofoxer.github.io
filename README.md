@@ -22,3 +22,5 @@ usage:
 git clone https://github.com/xiaofoxer/xiaofoxer.github.io.git
 
 git pull origin master
+
+TortoiseGit
