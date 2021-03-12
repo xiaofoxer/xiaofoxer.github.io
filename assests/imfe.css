@@ -315,17 +315,16 @@ body {
     font-size: .8em;
     height: 22px;
     line-height: 22px;
-    border-radius: 3px
+    border-radius: 3px;
+    color: #fff
 }
 
 .tag span.gulp {
     background: #5DD258;
-    color: #fff
 }
 
 .tag span.js {
     background: #3498DB;
-    color: #fff
 }
 
 .tag span.vue {
@@ -335,22 +334,34 @@ body {
 
 .tag span.html5 {
     background: #255A80;
-    color: #fff
 }
 
 .tag span.css3 {
     background: #ea7c62;
-    color: #fff
 }
 
 .tag span.sass {
     background: #2c90b7;
-    color: #fff
 }
 
 .tag span.less {
     background: #dc4793;
-    color: #fff
+}
+
+.tag span.elementUI {
+    background: #305cb5;
+}
+
+.tag span.nuxt {
+    background: #F8FBFF;
+}
+
+.tag span.iview {
+    background: #20C3FF;
+}
+
+.tag span.vantUI {
+    background: #cf6928;
 }
 
 .info .time {
